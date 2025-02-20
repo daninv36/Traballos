@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio40</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <img src="./assets/Qargon.png" width="134.142px" alt="logo qargon">
+            <div class="header__a">
+                <a class="header__a1" href="#logIn">log In</a>
+                <a class="header__a2" href="#signUp">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <div class="titel">
+                <img src="./assets/Location.png" alt="mapa">
+                <h2 class="titel__h2">Imos configurar a túa conta</h2>
+                <p class="titel__p">Completa o formulario para obter toda a información</p>
+            </div>
+            <form action="">
+                <div class="card__form">
+                    <div class="card__nombre">
+                        <label class="label" for="nombre">Nome<span>*</span></label>
+                        <input class="input" type="text" name="nombre" id="nombre" placeholder="Escribe teu nome" required>
+                    </div>
+
+                    <div class="card__apellidos">
+                        <label class="label" for="apellidos">Apellidos<span>*</span></label>
+                        <input class="input" type="text" name="apellidos" id="apellidos" placeholder="Escribe os teus apelidos" required>
+                    </div>
+
+                    <div class="card__ciudad">
+                        <label class="label" for="ciudad">Cidade</label>
+                        <select class="input" name="ciudad" id="ciudad">
+                            <option class="input" value="seleccionar">Seleccionar</option>
+                            <option class="input" value="md">Madrid</option>
+                            <option class="input" value="br">Barcelona</option>
+                            <option class="input" value="gl">Galicia</option>
+                            <option class="input" value="ml">Málaga</option>
+                        </select>
+                    </div>
+
+                    <div class="card__tel">
+                        <label class="label" for="telefono">Teléfono</label>
+                        <input class="input" type="tel" name="telefono" id="telefono" placeholder="Escribe o teu teléfono">
+                    </div>
+
+                    <div class="card__email">
+                        <label class="label" for="email">Email<span>*</span></label>
+                        <input class="input" type="email" name="email" id="email" placeholder="Escribe o teu correo electrónico" required>
+                    </div>
+
+                    <div class="card__submit">
+                        <input class="input__submit" class="input" type="submit" value="Enviar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

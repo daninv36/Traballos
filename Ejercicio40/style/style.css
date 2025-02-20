@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background-image: url(../assets/fondo.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ height: 120vh;
+ color: #050b32;
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-size: 14px;
+ font-family: worksans;
+}
+
+button {
+ cursor: pointer;
+}
+
+@font-face {
+    font-family: worksans;
+    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+:root{
+    --color-primary: #050b32;
+    --color-secundary: #576d99;
+    --color-tertiary: #0060f0;
+    --color-span: #EF4F45;
+    --font-primary: worksans;
+}
+
+/* header */
+
+.header{
+  background-color: white;
+}
+
+.header__nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.header img{
+  margin: 121.25px;
+  animation: logo 10s linear infinite;
+}
+
+.header__a{
+  margin-right: 100px;
+}
+
+.header__a1{
+  color: #050b32;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  text-decoration: none;
+  margin-right: 38px;
+}
+
+.header__a2{
+  background-color: var(--color-tertiary);
+  color: white;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  letter-spacing: 0.28px;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 11px 34px 11px 32px ;
+  box-shadow: 0px 12px 20px 0px rgba(78, 111, 158, 0.20);
+}
+
+/* main */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.card{
+  background-color: white;
+  padding: 32px 40px;
+  border-radius: 15px;
+  border: 1px solid #2666ED;
+}
+
+.titel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titel img{
+  margin-bottom: 24px;
+  width: 80px;
+  height: 80px;
+}
+
+.titel__h2{
+  color: #050b32;
+  font-size: 24px;
+  margin-bottom: 10px;
+  line-height: 34px;
+}
+
+.titel__p{
+  color: var(--color-secundary);
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.26px;
+  margin-bottom: 20px;
+}
+
+.card__form{
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  grid-template-rows: repeat(4 , 1fr);
+  grid-template-areas: 
+  "nome apellidos"
+  "cidade telefono"
+  "email email"
+  "enviar enviar";
+}
+
+.card__nombre{
+  grid-area: nome;
+}
+
+.card__apellidos{
+  grid-area: apellidos;
+}
+
+.card__ciudad{
+  grid-area: cidade;
+}
+
+.card__tel{
+  grid-area: telefono;
+}
+
+.card__email{
+  grid-area: email;
+}
+
+.card__submit{
+  grid-area: enviar;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__submit{
+  background-color: white;
+  padding: 13px 64px;
+  border-radius: 10px;
+  border: 1px solid var(--color-tertiary)!important;
+  color: var(--color-tertiary);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.label{
+  color: #050b32;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  letter-spacing: 0.24px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.label span{
+  color:var(--color-span) ;
+}
+
+.input{
+  color:  var(--color-secundary);
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #D2DAE2;
+  width: 100%;
+}
+
+input:valid{
+  border: 1px solid #D2DAE2;
+}
+
+input:invalid{
+  border: 1px solid var(--color-span);
+
+}
+
+@media (320px <= width <= 768px) {
+
+  .header{
+    height: 15vh;
+  }
+
+  .header__a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  } 
+
+  .header img{
+    margin: 30px;
+  }
+
+  .container{
+    height: 100vh;
+    padding: 10px;
+  }
+   
+  .card__form{
+    gap: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
